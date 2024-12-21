@@ -8,7 +8,7 @@ screen.tracer(0)
 
 paddle = Turtle()
 paddle.shape("square")
-paddle.shapesize(stretch_wid=5, stretch_len=10)
+paddle.shapesize(stretch_wid=5, stretch_len=8)
 paddle.color("white")
 paddle.penup()
 paddle.goto(350, 0)
@@ -25,8 +25,8 @@ def go_down():
 
 
 screen.listen()
-screen.onkey(go_up, "up")
-screen.onkey(go_down, "down")
+screen.onkey(go_up, "Up")
+screen.onkey(go_down, "Down")
 
 game_is_on = True
 while game_is_on:
