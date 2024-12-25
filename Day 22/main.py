@@ -36,10 +36,11 @@ while game_is_on:
         ball.bounce_x()
 
     # Detect Ball goes out
-    elif ball.xcor() > 380 or ball.xcor() < -380:
-        game_is_on = False
+    elif ball.xcor() > 380:
+        ball.reset_position()
 
-
+    elif ball.xcor() < -380:
+        ball.reset_position()
 
 
 
