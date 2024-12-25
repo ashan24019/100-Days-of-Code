@@ -32,8 +32,14 @@ while game_is_on:
         # ball needs to bounce
 
     # Detect collision with paddle
-    if ball.distance(r_paddle) < 50 and ball.xcor() > 330 or ball.distance(l_paddle) < 50 and ball.xcor() < -330:
+    elif ball.distance(r_paddle) < 50 and ball.xcor() > 330 or ball.distance(l_paddle) < 50 and ball.xcor() < -330:
         ball.bounce_x()
+
+    # Detect Ball goes out
+    elif ball.xcor() > 380 or ball.xcor() < -380:
+        game_is_on = False
+
+
 
 
 
