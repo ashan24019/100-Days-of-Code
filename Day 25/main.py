@@ -13,9 +13,7 @@
 #
 #     print(temperature)
 
-import pandas
-
-data = pandas.read_csv("weather-data.csv")
+# data = pandas.read_csv("weather-data.csv")
 
 # print(data["temp"])
 #
@@ -29,14 +27,34 @@ data = pandas.read_csv("weather-data.csv")
 #
 # print(round(data["temp"].mean()))
 
-max_num = max(data.temp)
+# max_num = max(data.temp)
+#
+# print(data[data.temp == max_num])
+#
+# monday = data[data.day == "Monday"]
+# print(monday.condition)
+#
+# temp_in_f = monday.temp + 273
+#
+# print(temp_in_f)
 
-print(data[data.temp == max_num])
+import pandas
 
-monday = data[data.day == "Monday"]
-print(monday.condition)
+data = pandas.read_csv("2018-Central-Park-Squirrel-Census-Squirrel-Data.csv")
+grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])
+red_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
+black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])
 
-temp_in_f = monday.temp + 273
+print(grey_squirrels_count)
+print(red_squirrels_count)
+print(black_squirrels_count)
 
-print(temp_in_f)
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [grey_squirrels_count, red_squirrels_count, black_squirrels_count]
+}
+df = pandas.DataFrame(data_dict)
+df.to_csv("squirrel_count.csv")
+
+
 
