@@ -1,4 +1,3 @@
-
 # sentence = "What is the Airspeed velocity of an Unladen Swallow?"
 #
 # word_list = sentence.split()
