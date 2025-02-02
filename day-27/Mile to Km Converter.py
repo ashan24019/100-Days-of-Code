@@ -5,7 +5,7 @@ from playground import calculate
 window = Tk()
 window.title("Mile to Km Converter")
 window.minsize(width=600, height=300)
-window.config(padx=100, pady=50)
+window.config(padx=200, pady=100)
 
 miles_input = Entry(width=10)
 miles_input.grid(column=1, row=0)
