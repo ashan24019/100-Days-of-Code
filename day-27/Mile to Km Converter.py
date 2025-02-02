@@ -20,7 +20,7 @@ is_equal_to = Label(text ="is equal to")
 is_equal_to.grid(column=0, row=1)
 
 def calculator():
-    answer = int(miles_input.get()) * 1.6
+    answer = float(miles_input.get()) * 1.6
     new_text.config(text=answer)
 
 calculate_button = Button(text ="Calculate", command=calculator)
